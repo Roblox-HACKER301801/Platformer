@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/random/trap_suspended_anim_strip_18.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/SwingingTrap.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.3, 0.00137012 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Swing"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -104.1, -0.25, 0, 0.4, 2.16801, 104.1, -0.2, 2.33157, 0.2, 2.33157, -104.1, -0.4, 7.14466, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+
+[node name="SwingingTrap" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 15 )
+texture = ExtResource( 1 )
+hframes = 18
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 0, 14, -7, 14, -12, 18, -9, 21, -9, 24, -13, 27, -9, 29, -9, 32, -12, 34, -9, 37, -9, 40, -12, 42, -10, 45, -8, 45, -7, 47, 7, 47, 9, 45, 12, 43, 9, 40, 9, 37, 12, 35, 9, 32, 9, 29, 12, 27, 9, 24, 9, 21, 12, 18, 7, 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/Swing = SubResource( 2 )
