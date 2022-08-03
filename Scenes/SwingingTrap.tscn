@@ -26,8 +26,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( -104.1, -0.25, 0, 0.4, 2.16801, 104.1, -0.3, 4.61549, 0.3, -0.361153, -104.1, -0.4, 7.14466, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5, 1 )
+"points": PoolRealArray( -104.652, -0.25, 0, 0.4, 2.16801, 96.5798, -0.5, 8.81719, 0.5, 5.8312, -99.4919, -0.4, 7.14466, 0.3, 2.98598 ),
+"times": PoolRealArray( -0.1, 0.5, 1 )
 }
 
 [node name="SwingingTrap" type="Node2D"]
