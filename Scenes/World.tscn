@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles+background/tileset.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/World.gd" type="Script" id=11]
 [ext_resource path="res://OtherAssets/pricedown bl.otf" type="DynamicFontData" id=12]
 [ext_resource path="res://Scenes/TorchFlame.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/lava.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=25]
 length = 0.001
@@ -471,10 +472,6 @@ position = Vector2( 361, 181 )
 position = Vector2( 184, 155 )
 rotation = -3.14159
 
-[node name="Area2D15" parent="." instance=ExtResource( 5 )]
-position = Vector2( 328, 219 )
-rotation = 3.14159
-
 [node name="DoorAndButton" parent="." instance=ExtResource( 6 )]
 position = Vector2( 314, 298 )
 
@@ -611,10 +608,6 @@ position = Vector2( 726, 5 )
 position = Vector2( -27, -7 )
 rotation = -1.57079
 
-[node name="Area2D27" parent="." instance=ExtResource( 5 )]
-position = Vector2( 456, 251 )
-rotation = -3.14158
-
 [node name="SwingingTrap2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 886, 15 )
 
@@ -623,50 +616,6 @@ position = Vector2( 757, -64 )
 
 [node name="SwingingTrap3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 50, -95 )
-
-[node name="Area2D28" parent="." instance=ExtResource( 5 )]
-position = Vector2( 774, 173 )
-rotation = -3.14159
-
-[node name="Area2D29" parent="." instance=ExtResource( 5 )]
-position = Vector2( 806, 173 )
-rotation = -3.14159
-
-[node name="Area2D30" parent="." instance=ExtResource( 5 )]
-position = Vector2( 790, 173 )
-rotation = -3.14159
-
-[node name="Area2D31" parent="." instance=ExtResource( 5 )]
-position = Vector2( 822, 173 )
-rotation = -3.14159
-
-[node name="Area2D32" parent="." instance=ExtResource( 5 )]
-position = Vector2( 854, 173 )
-rotation = -3.14159
-
-[node name="Area2D34" parent="." instance=ExtResource( 5 )]
-position = Vector2( 870, 173 )
-rotation = -3.14159
-
-[node name="Area2D33" parent="." instance=ExtResource( 5 )]
-position = Vector2( 838, 173 )
-rotation = -3.14159
-
-[node name="Area2D35" parent="." instance=ExtResource( 5 )]
-position = Vector2( 886, 173 )
-rotation = -3.14159
-
-[node name="Area2D36" parent="." instance=ExtResource( 5 )]
-position = Vector2( 904, 156 )
-rotation = -3.14159
-
-[node name="Area2D38" parent="." instance=ExtResource( 5 )]
-position = Vector2( 553, 237 )
-rotation = 3.14159
-
-[node name="Area2D37" parent="." instance=ExtResource( 5 )]
-position = Vector2( 697, 204 )
-rotation = -3.14159
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -681,86 +630,6 @@ margin_right = 1227.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 29 )
 text = "00:00:00"
-
-[node name="Area2D39" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7, 237 )
-rotation = -3.14159
-
-[node name="Area2D40" parent="." instance=ExtResource( 5 )]
-position = Vector2( 39, 237 )
-rotation = -3.14159
-
-[node name="Area2D41" parent="." instance=ExtResource( 5 )]
-position = Vector2( 23, 237 )
-rotation = -3.14159
-
-[node name="Area2D42" parent="." instance=ExtResource( 5 )]
-position = Vector2( 55, 237 )
-rotation = -3.14159
-
-[node name="Area2D43" parent="." instance=ExtResource( 5 )]
-position = Vector2( 87, 237 )
-rotation = -3.14159
-
-[node name="Area2D44" parent="." instance=ExtResource( 5 )]
-position = Vector2( 103, 237 )
-rotation = -3.14159
-
-[node name="Area2D45" parent="." instance=ExtResource( 5 )]
-position = Vector2( 71, 237 )
-rotation = -3.14159
-
-[node name="Area2D46" parent="." instance=ExtResource( 5 )]
-position = Vector2( 119, 237 )
-rotation = -3.14159
-
-[node name="Area2D47" parent="." instance=ExtResource( 5 )]
-position = Vector2( 136, 237 )
-rotation = -3.14159
-
-[node name="Area2D48" parent="." instance=ExtResource( 5 )]
-position = Vector2( 168, 237 )
-rotation = -3.14159
-
-[node name="Area2D49" parent="." instance=ExtResource( 5 )]
-position = Vector2( 152, 237 )
-rotation = -3.14159
-
-[node name="Area2D50" parent="." instance=ExtResource( 5 )]
-position = Vector2( 184, 237 )
-rotation = -3.14159
-
-[node name="Area2D51" parent="." instance=ExtResource( 5 )]
-position = Vector2( 216, 237 )
-rotation = -3.14159
-
-[node name="Area2D52" parent="." instance=ExtResource( 5 )]
-position = Vector2( 232, 237 )
-rotation = -3.14159
-
-[node name="Area2D53" parent="." instance=ExtResource( 5 )]
-position = Vector2( 200, 237 )
-rotation = -3.14159
-
-[node name="Area2D54" parent="." instance=ExtResource( 5 )]
-position = Vector2( 248, 237 )
-rotation = -3.14159
-
-[node name="Area2D55" parent="." instance=ExtResource( 5 )]
-position = Vector2( 937, 221 )
-rotation = -3.14159
-
-[node name="Area2D56" parent="." instance=ExtResource( 5 )]
-position = Vector2( 263, 237 )
-rotation = -3.14159
-
-[node name="Area2D57" parent="." instance=ExtResource( 5 )]
-position = Vector2( 314, 316 )
-rotation = -3.14159
-
-[node name="Area2D58" parent="." instance=ExtResource( 5 )]
-position = Vector2( 280, 237 )
-rotation = -3.14159
 
 [node name="SafePoint3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1000, 22 )
@@ -946,6 +815,99 @@ position = Vector2( -86, -43 )
 
 [node name="TorchFlame2" parent="." instance=ExtResource( 13 )]
 position = Vector2( -153, -43 )
+
+[node name="lava" parent="." instance=ExtResource( 14 )]
+position = Vector2( 8, 232 )
+
+[node name="lava2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 56, 232 )
+
+[node name="lava3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 40, 232 )
+
+[node name="lava4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 24, 232 )
+
+[node name="lava5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 72, 232 )
+
+[node name="lava6" parent="." instance=ExtResource( 14 )]
+position = Vector2( 120, 232 )
+
+[node name="lava7" parent="." instance=ExtResource( 14 )]
+position = Vector2( 104, 232 )
+
+[node name="lava8" parent="." instance=ExtResource( 14 )]
+position = Vector2( 88, 232 )
+
+[node name="lava9" parent="." instance=ExtResource( 14 )]
+position = Vector2( 136, 232 )
+
+[node name="lava10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 184, 232 )
+
+[node name="lava11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 168, 232 )
+
+[node name="lava12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 152, 232 )
+
+[node name="lava13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 200, 232 )
+
+[node name="lava14" parent="." instance=ExtResource( 14 )]
+position = Vector2( 248, 232 )
+
+[node name="lava15" parent="." instance=ExtResource( 14 )]
+position = Vector2( 232, 232 )
+
+[node name="lava16" parent="." instance=ExtResource( 14 )]
+position = Vector2( 216, 232 )
+
+[node name="lava17" parent="." instance=ExtResource( 14 )]
+position = Vector2( 280, 232 )
+
+[node name="lava18" parent="." instance=ExtResource( 14 )]
+position = Vector2( 264, 232 )
+
+[node name="lava19" parent="." instance=ExtResource( 14 )]
+position = Vector2( 552, 234 )
+scale = Vector2( 1.08, 1 )
+
+[node name="lava20" parent="." instance=ExtResource( 14 )]
+position = Vector2( 695, 201 )
+scale = Vector2( 1.15998, 1 )
+
+[node name="lava21" parent="." instance=ExtResource( 14 )]
+position = Vector2( 328, 217 )
+
+[node name="lava22" parent="." instance=ExtResource( 14 )]
+position = Vector2( 456, 248 )
+
+[node name="lava23" parent="." instance=ExtResource( 14 )]
+position = Vector2( 777, 169 )
+scale = Vector2( 1.20423, 1 )
+
+[node name="lava24" parent="." instance=ExtResource( 14 )]
+position = Vector2( 825, 169 )
+
+[node name="lava25" parent="." instance=ExtResource( 14 )]
+position = Vector2( 809, 169 )
+
+[node name="lava26" parent="." instance=ExtResource( 14 )]
+position = Vector2( 793, 169 )
+
+[node name="lava27" parent="." instance=ExtResource( 14 )]
+position = Vector2( 841, 169 )
+
+[node name="lava28" parent="." instance=ExtResource( 14 )]
+position = Vector2( 889, 169 )
+
+[node name="lava29" parent="." instance=ExtResource( 14 )]
+position = Vector2( 873, 169 )
+
+[node name="lava30" parent="." instance=ExtResource( 14 )]
+position = Vector2( 857, 169 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
