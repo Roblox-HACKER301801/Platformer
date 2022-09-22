@@ -11,4 +11,6 @@ func _process(delta):
 	print(GameStats.get_time())
 	$CanvasLayer/Control/Label.text = GameStats.get_time()
 
-
+	
+	#var dir = Input.get_action_strength("right") - Input.get_action_strength("left")
+	#rotation_degrees += dir  * 20 * delta

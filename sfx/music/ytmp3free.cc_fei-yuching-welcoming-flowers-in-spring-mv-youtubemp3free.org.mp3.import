@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ytmp3free.cc_fei-yuching-welcoming-flowers-in-spring-mv-youtubemp3free.org.mp3-9e910e06979f791b8dc7254ef6b3b4da.mp3str"
+
+[deps]
+
+source_file="res://sfx/music/ytmp3free.cc_fei-yuching-welcoming-flowers-in-spring-mv-youtubemp3free.org.mp3"
+dest_files=[ "res://.import/ytmp3free.cc_fei-yuching-welcoming-flowers-in-spring-mv-youtubemp3free.org.mp3-9e910e06979f791b8dc7254ef6b3b4da.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

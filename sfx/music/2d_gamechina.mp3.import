@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2d_gamechina.mp3-1d9b4c67889f137edcbfc85554a9813d.mp3str"
+
+[deps]
+
+source_file="res://sfx/music/2d_gamechina.mp3"
+dest_files=[ "res://.import/2d_gamechina.mp3-1d9b4c67889f137edcbfc85554a9813d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
