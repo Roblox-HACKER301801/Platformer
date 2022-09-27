@@ -36,5 +36,15 @@ margin_bottom = 44.0
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 text = "Quit"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 445.0
+margin_top = 238.0
+margin_right = 615.0
+margin_bottom = 252.0
+rect_scale = Vector2( 2.30916, 4.58835 )
+text = "TOUCH THE COIN TO WIN!"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
