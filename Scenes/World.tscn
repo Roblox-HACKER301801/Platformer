@@ -847,13 +847,13 @@ texture = ExtResource( 16 )
 script = ExtResource( 15 )
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource( 1 )]
-position = Vector2( -122, -123 )
+position = Vector2( -123, -122 )
 
 [node name="DoorAndButton2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 757, 447 )
 
 [node name="Button" parent="DoorAndButton2" index="0"]
-position = Vector2( -879, -481 )
+position = Vector2( -876, -480 )
 
 [node name="Door" parent="DoorAndButton2" index="1"]
 position = Vector2( 56, -486 )
