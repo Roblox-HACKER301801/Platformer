@@ -3,8 +3,8 @@ extends Node
 onready var music = AudioStreamPlayer.new()
 
 var music_tracks = {
-	"title_track":"res://sfx/music/soundtrackb.mp3",
-	"main":"res://sfx/music/soundtrackb.mp3",
+	"title_track":"res://sfx/music/soundtrackc.mp3.mp3",
+	"main":"res://sfx/music/soundtrackc.mp3.mp3",
 }
 
 var music_db = 12
