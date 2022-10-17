@@ -1658,7 +1658,7 @@ curve = SubResource( 54 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade8/Path2D"]
 position = Vector2( -1.20465, -1.18262 )
-rotation = -1.50876
+rotation = -1.50877
 
 [node name="Sprite" type="Sprite" parent="SpinningBlade8/Path2D/PathFollow2D"]
 texture = ExtResource( 8 )
