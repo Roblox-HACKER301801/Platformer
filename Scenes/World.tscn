@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles+background/tileset.png" type="Texture" id=2]
@@ -687,6 +687,80 @@ tracks/0/keys = {
 [sub_resource type="Curve2D" id=54]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.20465, -1.18262, 0, 0, 0, 0, 4.81848, -98.1563, 0, 0, 0, 0, 45.7761, -100.521, 0, 0, 0, 0, 46.9807, -65.0433, 0, 0, 0, 0, 66.2549, -62.6781, 0, 0, 0, 0, 68.6641, -46.1216, 0, 0, 0, 0, 551.723, -46.1216, 0, 0, 0, 0, 551.723, 18.9217, 0, 0, 0, 0, 83.1198, 15.3738, 0, 0, 0, 0, 81.9151, -3.54779, 0, 0, 0, 0, 65.0502, -2.36523, 0, 0, 0, 0, 63.8456, -21.2869, 0, 0, 0, 0, 45.7761, -22.4695, 0, 0, 0, 0, 46.9807, -42.5738, 0, 0, 0, 0, 25.2973, -42.5738, 0, 0, 0, 0, 25.2973, -79.2346, 0, 0, 0, 0, 4.81848, -80.4172, 0, 0, 0, 0, -2.4093, -1.18262 )
+}
+
+[sub_resource type="Animation" id=55]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Curve2D" id=57]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -3.61395, 4.73041, 0, 0, 0, 0, -6.02322, -62.6781, 0, 0, 0, 0, 504.742, -57.9477, 0, 0, 0, 0, 502.333, 0, 0, 0, 0, 0, -1.20468, -2.36523 )
+}
+
+[sub_resource type="Animation" id=58]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=59]
+resource_name = "spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Curve2D" id=60]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 14.4556, -4.73047, 0, 0, 0, 0, 10.8417, 47.3042, 0, 0, 0, 0, -489.082, 55.5824, 0, 0, 0, 0, -495.105, -13.0087, 0, 0, 0, 0, -7.22784, -7.09564 )
 }
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -1667,6 +1741,60 @@ hframes = 8
 [node name="Area2D" type="Area2D" parent="SpinningBlade8/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade8/Path2D/PathFollow2D/Sprite/Area2D"]
+shape = SubResource( 28 )
+
+[node name="SpinningBlade9" type="Node2D" parent="."]
+position = Vector2( 70, 400 )
+scale = Vector2( 0.830127, 0.845591 )
+script = ExtResource( 9 )
+follow_speed = 110
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade9"]
+playback_speed = -3.0
+anims/RESET = SubResource( 55 )
+anims/spin = SubResource( 56 )
+
+[node name="Path2D" type="Path2D" parent="SpinningBlade9"]
+curve = SubResource( 57 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade9/Path2D"]
+position = Vector2( -3.61395, 4.73041 )
+rotation = -1.60652
+
+[node name="Sprite" type="Sprite" parent="SpinningBlade9/Path2D/PathFollow2D"]
+texture = ExtResource( 8 )
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade9/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade9/Path2D/PathFollow2D/Sprite/Area2D"]
+shape = SubResource( 28 )
+
+[node name="SpinningBlade10" type="Node2D" parent="."]
+position = Vector2( 474, 355 )
+scale = Vector2( 0.830127, 0.845591 )
+script = ExtResource( 9 )
+follow_speed = 110
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade10"]
+playback_speed = -3.0
+anims/RESET = SubResource( 58 )
+anims/spin = SubResource( 59 )
+
+[node name="Path2D" type="Path2D" parent="SpinningBlade10"]
+curve = SubResource( 60 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade10/Path2D"]
+position = Vector2( 14.4556, -4.73047 )
+rotation = 1.64014
+
+[node name="Sprite" type="Sprite" parent="SpinningBlade10/Path2D/PathFollow2D"]
+texture = ExtResource( 8 )
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade10/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade10/Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 28 )
 
 [node name="TileMap" type="TileMap" parent="."]
