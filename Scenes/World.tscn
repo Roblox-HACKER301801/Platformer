@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles+background/tileset.png" type="Texture" id=2]
@@ -951,6 +951,38 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="Animation" id=62]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=63]
+resource_name = "spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
 [node name="World" type="Node2D"]
 position = Vector2( 231, 114 )
 script = ExtResource( 11 )
@@ -1798,6 +1830,46 @@ hframes = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade10/Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 28 )
 
+[node name="Area2D96" parent="." instance=ExtResource( 5 )]
+position = Vector2( 681, 571 )
+rotation = -3.14159
+
+[node name="Area2D97" parent="." instance=ExtResource( 5 )]
+position = Vector2( 720, 571 )
+rotation = -3.14159
+
+[node name="Area2D98" parent="." instance=ExtResource( 5 )]
+position = Vector2( 643, 571 )
+rotation = -3.14159
+
+[node name="Area2D99" parent="." instance=ExtResource( 5 )]
+position = Vector2( 655, 531 )
+rotation = -0.000713721
+
+[node name="Area2D100" parent="." instance=ExtResource( 5 )]
+position = Vector2( 700, 531 )
+rotation = -0.000713721
+
+[node name="Area2D101" parent="." instance=ExtResource( 5 )]
+position = Vector2( 795, 571 )
+rotation = -3.14159
+
+[node name="Area2D102" parent="." instance=ExtResource( 5 )]
+position = Vector2( 834, 571 )
+rotation = -3.14159
+
+[node name="Area2D103" parent="." instance=ExtResource( 5 )]
+position = Vector2( 757, 571 )
+rotation = -3.14159
+
+[node name="Area2D104" parent="." instance=ExtResource( 5 )]
+position = Vector2( 769, 532 )
+rotation = -0.000713721
+
+[node name="Area2D105" parent="." instance=ExtResource( 5 )]
+position = Vector2( 814, 532 )
+rotation = -0.000713721
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
 cell_size = Vector2( 16, 16 )
@@ -1846,6 +1918,33 @@ scale = Vector2( 0.017619, 0.0160872 )
 [node name="Poster8" parent="." instance=ExtResource( 24 )]
 position = Vector2( 413, 525 )
 scale = Vector2( 0.017619, 0.0160872 )
+
+[node name="SpinningBlade11" type="Node2D" parent="."]
+position = Vector2( 252, 355 )
+scale = Vector2( 0.830127, 0.845591 )
+script = ExtResource( 9 )
+follow_speed = 110
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade11"]
+playback_speed = -3.0
+anims/RESET = SubResource( 62 )
+anims/spin = SubResource( 63 )
+
+[node name="Path2D" type="Path2D" parent="SpinningBlade11"]
+curve = SubResource( 60 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade11/Path2D"]
+position = Vector2( -1.20465, -8.2782 )
+rotation = 0.00709636
+
+[node name="Sprite" type="Sprite" parent="SpinningBlade11/Path2D/PathFollow2D"]
+texture = ExtResource( 8 )
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite/Area2D"]
+shape = SubResource( 28 )
 
 [connection signal="body_entered" from="SpinningBlade3/Path2D/PathFollow2D/Sprite/Area2D" to="SpinningBlade3" method="_on_Area2D_body_entered"]
 
