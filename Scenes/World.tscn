@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles+background/tileset.png" type="Texture" id=2]
@@ -763,6 +763,80 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 8.43243, 47.3042, 0, 0, 0, 0, -501.128, 52.0346, 0, 0, 0, 0, -496.31, 0, 0, 0, 0, 0, 3.61389, -1.18262, 0, 0, 0, 0, 10.8417, 48.4868 )
 }
 
+[sub_resource type="Animation" id=62]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=63]
+resource_name = "spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Curve2D" id=64]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, -4.73047, 0, 0, 0, 0, 271.043, -3.54785, 0, 0, 0, 0, 279.475, 53.2172, 0, 0, 0, 0, -4.81854, 54.3998, 0, 0, 0, 0, -230.085, 55.5824, 0, 0, 0, 0, -227.676, -1.18262, 0, 0, 0, 0, -3.61395, -9.46088 )
+}
+
+[sub_resource type="Animation" id=65]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Curve2D" id=67]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -2.4093, -7.09564, 0, 0, 0, 0, -228.881, -9.46088, 0, 0, 0, 0, -227.676, -70.9563, 0, 0, 0, 0, 8.43243, -72.1389, 0, 0, 0, 0, 277.066, -68.5911, 0, 0, 0, 0, 281.885, -14.1913, 0, 0, 0, 0, -2.4093, -11.826 )
+}
+
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -950,38 +1024,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-
-[sub_resource type="Animation" id=62]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=63]
-resource_name = "spin"
-length = 0.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
-}
 
 [node name="World" type="Node2D"]
 position = Vector2( 231, 114 )
@@ -1870,6 +1912,160 @@ rotation = -0.000713721
 position = Vector2( 814, 532 )
 rotation = -0.000713721
 
+[node name="SpinningBlade11" type="Node2D" parent="."]
+position = Vector2( 252, 355 )
+scale = Vector2( 0.830127, 0.845591 )
+script = ExtResource( 9 )
+follow_speed = 110
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade11"]
+playback_speed = -3.0
+anims/RESET = SubResource( 62 )
+anims/spin = SubResource( 63 )
+
+[node name="Path2D" type="Path2D" parent="SpinningBlade11"]
+curve = SubResource( 64 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade11/Path2D"]
+position = Vector2( 0, -4.73047 )
+rotation = 0.00436303
+
+[node name="Sprite" type="Sprite" parent="SpinningBlade11/Path2D/PathFollow2D"]
+texture = ExtResource( 8 )
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite/Area2D"]
+shape = SubResource( 28 )
+
+[node name="SpinningBlade12" type="Node2D" parent="."]
+position = Vector2( 248, 409 )
+scale = Vector2( 0.830127, 0.845591 )
+script = ExtResource( 9 )
+follow_speed = 110
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade12"]
+playback_speed = -3.0
+anims/RESET = SubResource( 65 )
+anims/spin = SubResource( 66 )
+
+[node name="Path2D" type="Path2D" parent="SpinningBlade12"]
+curve = SubResource( 67 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade12/Path2D"]
+position = Vector2( -2.4093, -7.09564 )
+rotation = -3.13115
+
+[node name="Sprite" type="Sprite" parent="SpinningBlade12/Path2D/PathFollow2D"]
+texture = ExtResource( 8 )
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade12/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade12/Path2D/PathFollow2D/Sprite/Area2D"]
+shape = SubResource( 28 )
+
+[node name="Area2D106" parent="." instance=ExtResource( 5 )]
+position = Vector2( 14, 316 )
+rotation = -3.14159
+
+[node name="Area2D107" parent="." instance=ExtResource( 5 )]
+position = Vector2( 53, 316 )
+rotation = -3.14159
+
+[node name="Area2D108" parent="." instance=ExtResource( 5 )]
+position = Vector2( -24, 316 )
+rotation = -3.14159
+
+[node name="Area2D109" parent="." instance=ExtResource( 5 )]
+position = Vector2( -12, 277 )
+rotation = -0.000713721
+
+[node name="Area2D110" parent="." instance=ExtResource( 5 )]
+position = Vector2( 33, 277 )
+rotation = -0.000713721
+
+[node name="Area2D111" parent="." instance=ExtResource( 5 )]
+position = Vector2( 654, 316 )
+rotation = -3.14159
+
+[node name="Area2D112" parent="." instance=ExtResource( 5 )]
+position = Vector2( 693, 316 )
+rotation = -3.14159
+
+[node name="Area2D113" parent="." instance=ExtResource( 5 )]
+position = Vector2( 616, 316 )
+rotation = -3.14159
+
+[node name="Area2D114" parent="." instance=ExtResource( 5 )]
+position = Vector2( 628, 277 )
+rotation = -0.000713721
+
+[node name="Area2D115" parent="." instance=ExtResource( 5 )]
+position = Vector2( 673, 277 )
+rotation = -0.000713721
+
+[node name="Area2D116" parent="." instance=ExtResource( 5 )]
+position = Vector2( 695, 476 )
+rotation = -3.14159
+
+[node name="Area2D117" parent="." instance=ExtResource( 5 )]
+position = Vector2( 734, 476 )
+rotation = -3.14159
+
+[node name="Area2D118" parent="." instance=ExtResource( 5 )]
+position = Vector2( 657, 476 )
+rotation = -3.14159
+
+[node name="Area2D119" parent="." instance=ExtResource( 5 )]
+position = Vector2( 669, 437 )
+rotation = -0.000713721
+
+[node name="Area2D120" parent="." instance=ExtResource( 5 )]
+position = Vector2( 714, 437 )
+rotation = -0.000713721
+
+[node name="Area2D121" parent="." instance=ExtResource( 5 )]
+position = Vector2( 203, 316 )
+rotation = -3.14159
+
+[node name="Area2D122" parent="." instance=ExtResource( 5 )]
+position = Vector2( 242, 316 )
+rotation = -3.14159
+
+[node name="Area2D123" parent="." instance=ExtResource( 5 )]
+position = Vector2( 165, 316 )
+rotation = -3.14159
+
+[node name="Area2D124" parent="." instance=ExtResource( 5 )]
+position = Vector2( 177, 277 )
+rotation = -0.000713721
+
+[node name="Area2D125" parent="." instance=ExtResource( 5 )]
+position = Vector2( 222, 277 )
+rotation = -0.000713721
+
+[node name="Area2D126" parent="." instance=ExtResource( 5 )]
+position = Vector2( 178, 396 )
+rotation = -3.14159
+
+[node name="Area2D127" parent="." instance=ExtResource( 5 )]
+position = Vector2( 217, 396 )
+rotation = -3.14159
+
+[node name="Area2D128" parent="." instance=ExtResource( 5 )]
+position = Vector2( 140, 396 )
+rotation = -3.14159
+
+[node name="Area2D129" parent="." instance=ExtResource( 5 )]
+position = Vector2( 152, 357 )
+rotation = -0.000713721
+
+[node name="Area2D130" parent="." instance=ExtResource( 5 )]
+position = Vector2( 197, 357 )
+rotation = -0.000713721
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
 cell_size = Vector2( 16, 16 )
@@ -1918,33 +2114,6 @@ scale = Vector2( 0.017619, 0.0160872 )
 [node name="Poster8" parent="." instance=ExtResource( 24 )]
 position = Vector2( 413, 525 )
 scale = Vector2( 0.017619, 0.0160872 )
-
-[node name="SpinningBlade11" type="Node2D" parent="."]
-position = Vector2( 252, 355 )
-scale = Vector2( 0.830127, 0.845591 )
-script = ExtResource( 9 )
-follow_speed = 110
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade11"]
-playback_speed = -3.0
-anims/RESET = SubResource( 62 )
-anims/spin = SubResource( 63 )
-
-[node name="Path2D" type="Path2D" parent="SpinningBlade11"]
-curve = SubResource( 60 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade11/Path2D"]
-position = Vector2( -1.20465, -8.2782 )
-rotation = 0.00709636
-
-[node name="Sprite" type="Sprite" parent="SpinningBlade11/Path2D/PathFollow2D"]
-texture = ExtResource( 8 )
-hframes = 8
-
-[node name="Area2D" type="Area2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade11/Path2D/PathFollow2D/Sprite/Area2D"]
-shape = SubResource( 28 )
 
 [connection signal="body_entered" from="SpinningBlade3/Path2D/PathFollow2D/Sprite/Area2D" to="SpinningBlade3" method="_on_Area2D_body_entered"]
 
