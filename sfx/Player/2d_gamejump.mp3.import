@@ -11,5 +11,5 @@ dest_files=[ "res://.import/2d_gamejump.mp3-8cca98ec08f5737b2cc7152bb527a562.mp3
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

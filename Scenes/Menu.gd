@@ -6,6 +6,7 @@ func _ready():
 
 
 func _on_Start_pressed():
+	SoundPlayer.play_sound_effect("click")
 	get_tree().change_scene("res://Scenes/World.tscn")
 
 

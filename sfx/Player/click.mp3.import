@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/click.mp3-4ba5160fd751b5e70b2c5c297f2dc7ec.mp3str"
+
+[deps]
+
+source_file="res://sfx/Player/click.mp3"
+dest_files=[ "res://.import/click.mp3-4ba5160fd751b5e70b2c5c297f2dc7ec.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

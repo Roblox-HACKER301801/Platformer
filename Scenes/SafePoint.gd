@@ -14,5 +14,6 @@ func _process(delta):
 
 func _on_SafePoint_body_entered(body):
 	if body.is_in_group("Player"):
+		SoundPlayer.play_sound_effect("field")
 		GameStats.set_spawn(self)
 		$AnimationPlayer.play("saved")

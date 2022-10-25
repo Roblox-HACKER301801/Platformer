@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles+background/tileset.png" type="Texture" id=2]
@@ -393,203 +393,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=46]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Button:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ ExtResource( 20 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Door:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ ExtResource( 19 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Door:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 10 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Door:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Door/Door/CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=47]
-resource_name = "ButtonDown"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Button:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 18 ) ]
-}
-
-[sub_resource type="Animation" id=48]
-resource_name = "ButtonUp"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Button:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 20 ) ]
-}
-
-[sub_resource type="Animation" id=49]
-resource_name = "DoorClosed"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Door:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 19 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Door:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 10 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Door:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Door/Door/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=50]
-resource_name = "DoorOpen"
-length = 1.4
-tracks/0/type = "value"
-tracks/0/path = NodePath("Door/Door/CollisionShape2D:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Door:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 21 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Door:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Door:hframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 14 ]
-}
-
-[sub_resource type="Animation" id=51]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Button:texture")
@@ -1740,25 +1543,6 @@ anims/DoorClosed = SubResource( 44 )
 anims/DoorOpen = SubResource( 45 )
 anims/RESET = SubResource( 46 )
 
-[node name="DoorAndButton4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 474, 137 )
-
-[node name="Button" parent="DoorAndButton4" index="0"]
-position = Vector2( -600, -258 )
-rotation = 1.57079
-scale = Vector2( 0.78955, 0.765577 )
-
-[node name="Door" parent="DoorAndButton4" index="1"]
-position = Vector2( -588, -242 )
-rotation = -1.57079
-
-[node name="AnimationPlayer" parent="DoorAndButton4" index="2"]
-anims/ButtonDown = SubResource( 47 )
-anims/ButtonUp = SubResource( 48 )
-anims/DoorClosed = SubResource( 49 )
-anims/DoorOpen = SubResource( 50 )
-anims/RESET = SubResource( 51 )
-
 [node name="Area2D88" parent="." instance=ExtResource( 5 )]
 position = Vector2( 572, 571 )
 rotation = -3.14159
@@ -1928,7 +1712,7 @@ curve = SubResource( 64 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade11/Path2D"]
 position = Vector2( 0, -4.73047 )
-rotation = 0.00436303
+rotation = 0.00436339
 
 [node name="Sprite" type="Sprite" parent="SpinningBlade11/Path2D/PathFollow2D"]
 texture = ExtResource( 8 )
@@ -2121,4 +1905,3 @@ scale = Vector2( 0.017619, 0.0160872 )
 [editable path="DoorAndButton"]
 [editable path="SpinningBlade"]
 [editable path="DoorAndButton3"]
-[editable path="DoorAndButton4"]
